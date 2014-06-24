@@ -72,6 +72,7 @@ function drumeleon_menu_link_alter(&$item) {
     $mlid = $result['mlid'];
     
     // Alter the link data.
+    $item['options']['attributes']['title'] = 'Add a new file.';
     $item['plid'] = $mlid;
     $item['weight'] = 1;
   }
