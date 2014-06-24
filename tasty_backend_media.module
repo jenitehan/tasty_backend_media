@@ -43,7 +43,6 @@ function tasty_backend_media_menu_local_tasks_alter(&$data, $router_item, $root_
 /**
  * Override or insert variables into the page templates.
  */
-
 function tasty_backend_media_preprocess_page(&$variables, $hook) {
   // Can't user menu_get_object() since views messes with it - https://api.drupal.org/comment/45018#comment-45018.
   $router_item = menu_get_item();
