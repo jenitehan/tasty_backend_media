@@ -1,0 +1,6 @@
+name = Tasty Backend Media
+description = Tasty Backend configuration for the media module.
+version = VERSION
+core = 7.x
+package = Tasty Backend
+dependencies[] = tasty_backend_base

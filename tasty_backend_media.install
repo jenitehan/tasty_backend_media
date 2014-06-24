@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function tasty_backend_media_install() {
+  // Set permissions for the content admin role that was created by the Tasty Backend base module.
+  $content_role = user_role_load_by_name('content admin');
+  user_role_grant_permissions($content_role->rid, array(
+    'administer files',
+    'create files',
+    'access media browser',
+    )
+  );
+}

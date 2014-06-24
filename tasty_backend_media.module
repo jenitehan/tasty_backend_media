@@ -1,0 +1,10 @@
+<?php
+
+/**
+* Implements hook_ctools_plugin_api().
+*/
+function tasty_backend_media_ctools_plugin_api($owner, $api) {
+  if ($owner == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+}
