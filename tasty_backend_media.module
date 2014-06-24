@@ -71,7 +71,8 @@ function drumeleon_menu_link_alter(&$item) {
       ->fetchAssoc();
     $mlid = $result['mlid'];
     
-    // Set the parent of the file/add link.
+    // Alter the link data.
     $item['plid'] = $mlid;
+    $item['weight'] = 1;
   }
 }
