@@ -55,3 +55,23 @@ function tasty_backend_media_preprocess_page(&$variables, $hook) {
     }
   }
 }
+
+/**
+ * Implements hook_menu_link_alter().
+ *
+ * Set file add link to be child of our files link.
+ */
+function drumeleon_menu_link_alter(&$item) {
+  if ($item['link_path'] == 'file/add') {
+    // Get the mlid of the files navigation menu link.
+    $result = db_select('menu_links', 'ml')
+      ->fields('ml')
+      ->condition('router_path', 'admin/manage/files','=')
+      ->execute()
+      ->fetchAssoc();
+    $mlid = $result['mlid'];
+    
+    // Set the parent of the file/add link.
+    $item['plid'] = $mlid;
+  }
+}
