@@ -61,7 +61,7 @@ function tasty_backend_media_preprocess_page(&$variables, $hook) {
  *
  * Set file add link to be child of our files link.
  */
-function drumeleon_menu_link_alter(&$item) {
+function tasty_backend_media_menu_link_alter(&$item) {
   if ($item['link_path'] == 'file/add') {
     // Get the mlid of the files navigation menu link.
     $result = db_select('menu_links', 'ml')
