@@ -335,7 +335,7 @@ function tasty_backend_media_views_default_views() {
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
   $handler->display->display_options['empty']['area']['field'] = 'area';
-  $handler->display->display_options['empty']['area']['content'] = 'No files available.';
+  $handler->display->display_options['empty']['area']['content'] = 'No images available.';
   $handler->display->display_options['empty']['area']['format'] = 'plain_text';
   /* Field: File: Name */
   $handler->display->display_options['fields']['filename']['id'] = 'filename';
